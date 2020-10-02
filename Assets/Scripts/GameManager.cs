@@ -7,19 +7,15 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Text contentText;
+    public Text currentLocation;
     public Step startStep;
-    public int[] numbers;
-
     public Step currentStep;
-
-    public string[] Mounth;
-    // Start is called before the first frame update
+    
     void Start()
     {
         currentStep = startStep;
         contentText.text = startStep.content;
-
-        
+        currentLocation.text = currentStep.location;
     }
 
     // Update is called once per frame
@@ -29,11 +25,13 @@ public class GameManager : MonoBehaviour
         {
             currentStep = currentStep.nextSteps[0];
             contentText.text = currentStep.content;
+            currentLocation.text = currentStep.location;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currentStep = currentStep.nextSteps[1];
             contentText.text = currentStep.content;
+            currentLocation.text = currentStep.location;
         }
       
     }

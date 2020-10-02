@@ -6,6 +6,6 @@ public class Step : MonoBehaviour
 {
     [TextArea(10,50)]
     public string content;
-
+    public string location;
     public Step[] nextSteps;
 }
