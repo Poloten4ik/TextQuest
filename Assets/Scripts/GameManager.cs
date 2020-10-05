@@ -32,8 +32,14 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Action(currentStep.nextSteps[1]);
-        } 
+            try
+            {
+                Action(currentStep.nextSteps[1]);
+            }
+            catch
+            {
+            }
+        }
     }
 
     private IEnumerator TypeSentence(string sentence)
