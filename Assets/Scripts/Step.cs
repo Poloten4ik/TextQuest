@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-
-
 public class Step : MonoBehaviour
 {
     [TextArea(10,50)]
@@ -13,5 +11,4 @@ public class Step : MonoBehaviour
     public string location;
     public Step[] nextSteps;
     public Sprite imageLocation;
-   
 }
